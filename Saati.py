@@ -1,5 +1,13 @@
 import math
-n = input(print("сколько критериев в системе?"))
+n = int(input(print("сколько критериев в системе?")))
+if n > 10:
+    print("10 - предел.")
+    exit()
+elif n <= 0:
+    print("10 - предел, 0 не подойдет.")
+    exit()
+else:
+    pass
 #проверка на целое число
 
 
@@ -51,7 +59,7 @@ CFb = Mb/sx
 CFc = Mc/sx
 CFd = Md/sx
 
-print (f"dfff {CFa:.2f}")
-print (f"dfff {CFb:.2f}")
-print (f"dfff {CFc:.2f}")
-print (f"dfff {CFd:.2f}")
+print (f" {CFa:.2f}")
+print (f" {CFb:.2f}")
+print (f" {CFc:.2f}")
+print (f" {CFd:.2f}")
