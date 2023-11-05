@@ -21,7 +21,12 @@ def calculate_weights(matrix):
     return weights
 
 # Ввод количества критериев
-num_criteria = int(input("Введите количество критериев: "))
+while True:
+    try:
+        num_criteria = int(input("Введите количество критериев: "))
+        break
+    except ValueError:
+        print('Неверное значение')
 
 # Получение матрицы попарного сравнения
 comparison_matrix = input_comparison_matrix(num_criteria)
