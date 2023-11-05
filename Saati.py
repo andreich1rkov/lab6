@@ -6,10 +6,15 @@ def input_comparison_matrix(n):
     print("Введите значения матрицы попарного сравнения критериев:")
     for i in range(n):
         for j in range(i+1, n):
-            value = float(input(f"Парное сравнение критериев {i+1} и {j+1} (отношение важности, 1/значение): "))
-            matrix[i][j] = value
-            matrix[j][i] = 1 / value
-        matrix[i][i] = 1
+            while True:
+                try:
+                    value = float(input(f"Парное сравнение критериев {i+1} и {j+1} (отношение важности, 1/значение): "))
+                    matrix[i][j] = value
+                    matrix[j][i] = 1 / value
+                    matrix[i][i] = 1
+                    break
+                except ValueError:
+                    print("Введите число")
     return matrix
 
 # Функция для вычисления весовых коэффициентов
