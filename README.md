@@ -17,3 +17,6 @@
 
 
 ![screenshot1](https://github.com/andreich1rkov/lab6/blob/main/test3.JPG)
+
+
+![screenshot1](https://github.com/andreich1rkov/lab6/blob/main/test4.JPG)
