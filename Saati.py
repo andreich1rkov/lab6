@@ -9,12 +9,15 @@ def input_comparison_matrix(n):
             while True:
                 try:
                     value = float(input(f"Парное сравнение критериев {i+1} и {j+1} (отношение важности, 1/значение): "))
+                    if value <= 0: 
+                        error = ValueError
+                        raise error
                     matrix[i][j] = value
                     matrix[j][i] = 1 / value
                     matrix[i][i] = 1
                     break
                 except ValueError:
-                    print("Введите число")
+                    print("Введите положительное число")
     return matrix
 
 # Функция для вычисления весовых коэффициентов
@@ -29,6 +32,9 @@ def calculate_weights(matrix):
 while True:
     try:
         num_criteria = int(input("Введите количество критериев: "))
+        if num_criteria <= 0:
+            error = ValueError
+            raise error
         break
     except ValueError:
         print('Неверное значение')
